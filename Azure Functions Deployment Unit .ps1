@@ -31,6 +31,7 @@ $TenantID="76365d9c-4d0c-4c97-bd67-1031c1b279b3"
 $ApplicationId="df4bb57e-6ea2-4e75-b932-38ca97cb219f"
 $ClientSecret="kZ3v-W1S=_Ce5NCFD7=5uW*NcX8r*2Ws"
 
+az
 $MGMRG=New-RIAzResourceGroup -Location $Location -System $System -ResourceType $ResourceType -Environment $Environment
 $MGMStorage=New-RIAzStorageAccount -ResourceGroupName $MGMRG.ResourceGroupName -Location $Location -System $System -SkuName $SkuName -Environment $Environment -AccessTier $AccessTier
 $StorageKey=Get-RIAzFuncAppStorageAccountConnection -ResourceGroupName $MGMRG.ResourceGroupName -StorageAccountName $MGMStorage.StorageAccountName
